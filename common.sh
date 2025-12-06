@@ -61,7 +61,7 @@ python_setup(){
 }
 
 app_setup(){
-    id roboshop &>>$LOG_FILE
+    id roboshop &>>$LOG_FILE   #when varb app-name called it responds etc catalogue user payment
     if [ $? -ne 0 ]; then
         useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop &>>$LOG_FILE
         VALIDATE $? "Creating system user"
